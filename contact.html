@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Reservation</title>
+    <link rel="stylesheet" href="./assets/css/styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+        .reservation-form {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 500px;
+            margin-top: 400px;
+        }
+        .reservation-form h2 {
+            margin-bottom: 20px;
+            font-size: 24px;
+            color: #333333;
+            text-align: center;
+        }
+        .reservation-form label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #555555;
+        }
+        .reservation-form input,
+        .reservation-form select,
+        .reservation-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #cccccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 16px;
+            color: #333333;
+        }
+        .reservation-form input:focus,
+        .reservation-form select:focus,
+        .reservation-form textarea:focus {
+            border-color: #28a745;
+            outline: none;
+        }
+        .reservation-form button {
+            width: 100%;
+            padding: 15px;
+            background-color: #eeee1d;
+            border: none;
+            border-radius: 4px;
+            color: #ffffff;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .reservation-form button:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+    <header class="l-header" id="header">
+        <nav class="nav bd-container">
+            <a href="#" class="nav__logo">Southern Spice</a>
+
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="./index.html" class="nav__link active-link">Home</a></li>
+                    <li class="nav__item"><a href="./index.html" class="nav__link">About</a></li>
+                    <li class="nav__item"><a href="./index.html" class="nav__link">Services</a></li>
+                    <li class="nav__item"><a href="./index.html" class="nav__link">Menu</a></li>
+                    <li class="nav__item"><a href="./index.html" class="nav__link">Contact us</a></li>
+
+                    <li><i class='bx bx-moon change-theme' id="theme-button"></i></li>
+                </ul>
+            </div>
+
+            <div class="nav__toggle" id="nav-toggle">
+                <i class='bx bx-menu'></i>
+            </div>
+        </nav>
+    </header>
+    
+    <form class="reservation-form">
+        <h2>Dining Reservation</h2>
+        <label for="name">Full Name</label>
+        <input type="text" id="name" name="name" required>
+        
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+        
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" name="phone" required>
+        
+        <label for="guests">Number of Guests</label>
+        <input type="number" id="guests" name="guests" min="1" max="20" required>
+        
+        <label for="date">Reservation Date</label>
+        <input type="date" id="date" name="date" required>
+        
+        <label for="time">Reservation Time</label>
+        <input type="time" id="time" name="time" required>
+        
+        <label for="requests">Special Requests</label>
+        <textarea id="requests" name="requests" rows="4"></textarea>
+        
+        <button type="submit" id="submitButton">Reserve Table</button>
+    </form>
+    <br><br><br>
+   <script>
+document.getElementById("submitButton").addEventListener("click",function(){
+    alert("you will get a call back from our restaurant as soon as possible!")
+})
+   </script>
+</body>
+</html>
